@@ -1,0 +1,39 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>
+        Photo Name
+      </th>
+      <th>
+        user
+      </th>
+      <th>
+        Date of Upload
+      </th>
+      <th>
+        Options
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let dataItem of PhotoList">
+      <td>
+        {{dataItem.PhotoName}}
+      </td>
+      <td>
+        {{dataItem.username}}
+      </td>
+      <td>
+         {{dataItem.DateOfUpload}}
+      </td>
+      <td>
+        <button type="button" class="btn btn-light mr-1">
+          Edit
+        </button>
+        <button type="button" class="btn btn-light mr-1">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
