@@ -7,16 +7,19 @@ import { Observable
   providedIn: 'root'
 })
 export class SharedService {
-  readonly APIUrl ="";
-  readonly PhotoUrl = "";
+  readonly APIUrl ="http://localhost:5000/api";
+  readonly PhotoUrl = "http://localhost:5000/Photos";
 
   constructor(private http:HttpClient) { }
 
   getPhotoList():Observable<any[]>{
     return this.http.get<any>(this.APIUrl +'/Photos');
   }
+  addPhotos(val:any){
+    return this.http.post(this.APIUrl+'/Photos',val);
+  }
 
-  uploadPhoto(val:any){
+  UploadPhoto(val:any){
     return this.http.post(this.APIUrl +'/Photos/SaveFile', val);
   }
 

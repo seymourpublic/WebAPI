@@ -1,0 +1,46 @@
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="d-flex flex-row bd-highlight mb-3">
+
+
+
+
+
+
+<div class="form-froup row" style="width: 60%;">
+
+  <label class="col-sm-10">Photo name</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" [(ngModel)]="PhotoName" placeholder="Enter photo name ">
+  </div>
+  <label class="col-sm-10">User name</label>
+  <div class="col-sm-10">
+    <input type="text" class="form-control" [(ngModel)]="PhotoName" placeholder="Enter user name ">
+  </div>
+  <label class="col-sm-10">Date of upload</label>
+  <div class="col-sm-10">
+    <input type="date" class="form-control" [(ngModel)]="PhotoName" placeholder="yyyy/mm/dd ">
+  </div>
+</div>
+<div class="ml-3 bd-highlight" style="width: 40%">
+<img [src]=PhotoFilePath height="250px;" width="200px;">
+<input type="file" (change)="uploadPhoto($event)" class="mt-2"/>
+</div>
+</div>
+
+<button (click)="addPhoto()" *ngIf="photo.PhotoID==0" class="btn btn-primary">
+  upload
+</button>
+<button (click)="updatePhoto()" *ngIf="photo.PhotoID!=0" class="btn btn-primary">
+  update
+</button>

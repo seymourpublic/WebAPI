@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddEditUserComponent } from './add-edit-user.component';
+import { ShowPhotosComponent } from './show-photos.component';
 
-describe('AddEditUserComponent', () => {
-  let component: AddEditUserComponent;
-  let fixture: ComponentFixture<AddEditUserComponent>;
+describe('ShowPhotosComponent', () => {
+  let component: ShowPhotosComponent;
+  let fixture: ComponentFixture<ShowPhotosComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddEditUserComponent ]
+      declarations: [ ShowPhotosComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AddEditUserComponent);
+    fixture = TestBed.createComponent(ShowPhotosComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

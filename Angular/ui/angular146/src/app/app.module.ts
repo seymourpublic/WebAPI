@@ -13,6 +13,10 @@ import { DeletePhotoComponent } from './photo/delete-photo/delete-photo.componen
 import { SharedService } from './shared.service';
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ShowPhotosComponent } from './photo/show-photos/show-photos.component';
+import { ShowAlbumComponent } from './album/show-album/show-album.component';
+import { AddEditPhotoComponent } from './photo/add-edit-photo/add-edit-photo.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,13 +26,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ShowComponent,
     DeleteUserComponent,
     AddEditUserComponent,
-    DeletePhotoComponent
+    DeletePhotoComponent,
+    ShowPhotosComponent,
+    ShowAlbumComponent,
+    AddEditPhotoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [SharedService],
   bootstrap: [AppComponent]
